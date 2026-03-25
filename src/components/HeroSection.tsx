@@ -14,16 +14,16 @@ export default function HeroSection() {
   const socialLinks = [
     {
       icon: Github,
-      href: "https://github.com/naufal-angkasah",
+      href: "https://github.com/sasawho/Sa-Portofolio",
       label: "GitHub",
     },
     {
       icon: Linkedin,
-      href: "https://www.linkedin.com/in/naufal-angkasah/",
+      href: "https://www.linkedin.com",
       label: "LinkedIn",
     },
     { icon: Youtube, href: "https://youtube.com/", label: "YouTube" },
-    { icon: Instagram, href: "https://instagram.com/", label: "Instagram" },
+    { icon: Instagram, href: "https://www.instagram.com/khan.saa288?igsh=MWM1dWYzeDB6N2Rndw==", label: "Instagram" },
   ];
 
   return (
