@@ -10,6 +10,7 @@ export default function HeroSection() {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   const socialLinks = [
     {
       icon: Github,
@@ -24,6 +25,7 @@ export default function HeroSection() {
     { icon: Youtube, href: "https://youtube.com/", label: "YouTube" },
     { icon: Instagram, href: "https://instagram.com/", label: "Instagram" },
   ];
+
   return (
     <section
       id="home"
@@ -33,7 +35,7 @@ export default function HeroSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
-          {/* FOTO KIRI */}
+          {/* FOTO */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -41,21 +43,23 @@ export default function HeroSection() {
             className="flex-shrink-0"
           >
             <img
-              src="foto.jpeg" // ganti dengan foto kamu
-              alt="Naufal"
-              className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-primary shadow-glow"
+              src="foto.jpeg"
+              alt="Laksamana Khansa"
+              className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border border-white/20 shadow-glow"
             />
           </motion.div>
 
-          {/* TEXT KANAN */}
+          {/* TEXT */}
           <div className="max-w-2xl text-center lg:text-left">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
+              className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
             >
-              <span className="text-gradient">Khansa Portfolio</span>
+              <span className="text-gradient">
+                Laksamana Khansa
+              </span>
             </motion.h1>
 
             <motion.p
@@ -64,8 +68,10 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-lg md:text-xl text-muted-foreground mb-8"
             >
-              Saya membangun aplikasi web yang indah dan fungsional, serta
-              membagikan pengetahuan melalui konten yang inspiratif.
+              I am a student with a strong interest in technology and a
+              background in chemistry. Currently, I am focused on learning
+              programming and continuously exploring new knowledge across
+              different fields.
             </motion.p>
 
             <motion.div
@@ -79,10 +85,11 @@ export default function HeroSection() {
                 className="rounded-full px-8 shadow-glow"
                 onClick={() => {
                   const element = document.querySelector("#projects");
-                  if (element) element.scrollIntoView({ behavior: "smooth" });
+                  if (element)
+                    element.scrollIntoView({ behavior: "smooth" });
                 }}
               >
-                Lihat Projects
+                View Projects
               </Button>
 
               <Button
@@ -91,10 +98,11 @@ export default function HeroSection() {
                 className="rounded-full px-8"
                 onClick={() => {
                   const element = document.querySelector("#contact");
-                  if (element) element.scrollIntoView({ behavior: "smooth" });
+                  if (element)
+                    element.scrollIntoView({ behavior: "smooth" });
                 }}
               >
-                Hubungi Saya
+                Contact Me
               </Button>
             </motion.div>
 
@@ -123,7 +131,7 @@ export default function HeroSection() {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 p-3 rounded-full glass animate-float cursor-pointer"
         whileHover={{ scale: 1.1 }}
       >
-        <ArrowDown className="h-5 w-5 text-primary" />
+        <ArrowDown className="h-5 w-5 text-foreground" />
       </motion.button>
     </section>
   );
