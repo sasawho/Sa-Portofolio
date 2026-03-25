@@ -3,9 +3,21 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, Play, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-import PetirImg from '../assets/petir.png';
-import JoinUsGif from '../assets/joinus.gif';
-import WeatherImg from '../assets/weatheer.gif';
+// 🔥 REPLACED IMAGES WITH EMOJI SVG DATA
+const createEmojiImage = (emoji: string) =>
+  `data:image/svg+xml;utf8,
+  <svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'>
+    <rect width='100%' height='100%' fill='black'/>
+    <text x='50%' y='50%' font-size='80' text-anchor='middle' dominant-baseline='middle' fill='white'>
+      ${emoji}
+    </text>
+  </svg>`;
+
+const ChemistryImg = createEmojiImage('🧪');
+const BiologyImg = createEmojiImage('🧬');
+const DebateImg = createEmojiImage('🎤');
+const VolleyImg = createEmojiImage('🏐');
+const OrgImg = createEmojiImage('👥');
 
 const slideVariants = {
   enter: (direction: number) => ({
@@ -84,45 +96,45 @@ const CardCarousel = ({ images }: { images: string[] }) => {
 const projects = [
   {
     title: 'Chemistry Exploration',
-    description: 'A collection of my learning journey in chemistry, exploring concepts, experiments, and understanding how reactions shape the world around us.',
-    tags: ['Chemistry', 'Science', 'Experiments'],
-    image: [PetirImg, WeatherImg, JoinUsGif],
+    description: 'My journey in learning chemistry, exploring reactions, concepts, and understanding how science explains the world.',
+    tags: ['Chemistry', 'Science', 'Learning'],
+    image: [ChemistryImg, ChemistryImg, ChemistryImg],
     color: 'from-blue-500/20 to-cyan-500/20',
     github: '#',
     demo: '#',
   },
   {
     title: 'Biology & Science Studies',
-    description: 'Documenting my studies in biology and science, focusing on understanding living systems and how they interact with the environment.',
-    tags: ['Biology', 'Science', 'Learning'],
-    image: [WeatherImg, PetirImg, JoinUsGif],
+    description: 'Learning about biology and life systems, understanding how living organisms interact and function.',
+    tags: ['Biology', 'Science', 'School'],
+    image: [BiologyImg, BiologyImg, BiologyImg],
     color: 'from-green-500/20 to-teal-500/20',
     github: '#',
     demo: '#',
   },
   {
     title: 'English Debate Journey',
-    description: 'My experience in English debate, developing critical thinking, argumentation, and public speaking skills through competitions and practice.',
-    tags: ['Debate', 'English', 'Public Speaking'],
-    image: [JoinUsGif, PetirImg, WeatherImg],
+    description: 'Developing critical thinking and public speaking skills through English debate activities and practice.',
+    tags: ['Debate', 'English', 'Communication'],
+    image: [DebateImg, DebateImg, DebateImg],
     color: 'from-purple-500/20 to-pink-500/20',
     github: '#',
     demo: '#',
   },
   {
     title: 'Volleyball Team Experience',
-    description: 'Being part of a volleyball team has taught me discipline, teamwork, and resilience both on and off the court.',
+    description: 'Building teamwork, discipline, and consistency through volleyball training and matches.',
     tags: ['Volleyball', 'Teamwork', 'Sports'],
-    image: [PetirImg, JoinUsGif, WeatherImg],
+    image: [VolleyImg, VolleyImg, VolleyImg],
     color: 'from-orange-500/20 to-red-500/20',
     isContent: true,
     youtube: '#',
   },
   {
     title: 'Organization & Leadership',
-    description: 'Active involvement in school organizations, contributing to teamwork, leadership, and event coordination experiences.',
-    tags: ['Organization', 'Leadership', 'Teamwork'],
-    image: [JoinUsGif, WeatherImg, PetirImg],
+    description: 'Active participation in school organizations, improving leadership, teamwork, and responsibility.',
+    tags: ['Organization', 'Leadership', 'School'],
+    image: [OrgImg, OrgImg, OrgImg],
     color: 'from-cyan-500/20 to-blue-500/20',
     isContent: true,
     youtube: '#',
