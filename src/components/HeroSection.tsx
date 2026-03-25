@@ -55,7 +55,7 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
             >
-              <span className="text-gradient">Naufal Portfolio</span>
+              <span className="text-gradient">Khansa Portfolio</span>
             </motion.h1>
 
             <motion.p
