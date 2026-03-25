@@ -98,8 +98,8 @@
     /* Custom tokens dark */
     --gradient-primary: linear-gradient(
       210deg,
-      hsl(0, 0%, 71%),
-      hsl(0, 0%, 100%)
+      hsl(0, 0%, 0%),
+      hsl(0, 0%, 0%)
     );
     --gradient-hero: linear-gradient(
       180deg,
