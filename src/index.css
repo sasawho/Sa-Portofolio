@@ -39,8 +39,8 @@
     /* Custom tokens */
     --gradient-primary: linear-gradient(
       135deg,
-      hsl(307, 7%, 75%),
-      hsl(0, 0%, 30%)
+      hsl(0, 0%, 35%),
+      hsl(0, 0%, 17%)
     );
     --gradient-hero: linear-gradient(
       180deg,
