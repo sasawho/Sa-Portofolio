@@ -6,27 +6,21 @@ export default function AboutSection() {
   const [activeAccordion, setActiveAccordion] = useState(0);
 
   const stats = [
-    { icon: Code2, value: '50+', label: 'Projects Selesai' },
-    { icon: Video, value: '100+', label: 'Video Konten' },
-    // { icon: Coffee, value: '1000+', label: 'Cangkir Kopi' },
-    // { icon: Rocket, value: '5+', label: 'Tahun Pengalaman' },
+    { icon: Code2, value: 'Student', label: 'High School' },
+    { icon: Video, value: 'Active', label: 'Organizations' },
   ];
 
   const accordionData = [
     {
-      title: "Passionate Developer",
-      content: "Saya adalah seorang Fullstack Web Developer dengan passion yang kuat dalam menciptakan solusi digital yang inovatif.",
-      content2: "Dengan pengalaman lebih dari 5 tahun, saya telah membantu berbagai klien dalam mewujudkan ide-ide mereka menjadi aplikasi web yang powerful. Saya selalu haus akan teknologi baru.",
-      content3: "Saya fokus pada performa, keamanan, dan pengalaman pengguna (UX) yang luar biasa di setiap baris kode yang saya tulis"
+      title: "Student & Lifelong Learner",
+      content: "I am a high school student with a strong interest in chemistry and a growing passion for learning new things, especially in science and technology.",
+      content2: "Sometimes I can be very focused and perform well, but like many students, I also have moments where motivation becomes a challenge. Despite that, I always try to improve and keep moving forward.",
+      content3: "I enjoy exploring different subjects, asking questions, and understanding how things work, especially in the world of chemistry."
     },
     {
-      title: "Creative Content Creator",
-      content: "Selain coding, saya aktif berbagi pengetahuan tentang pemrograman melalui berbagai platform. Saya percaya bahwa berbagi ilmu adalah cara terbaik untuk terus belajar dan membangun komunitas yang suportif."
+      title: "Active & Involved Individual",
+      content: "I am actively involved in school organizations and extracurricular activities. I participate in English debate, where I develop critical thinking and communication skills, and volleyball, which helps me build teamwork and discipline."
     },
-    // {
-    //   title: "Problem Solver & Tech Enthusiast",
-    //   content: "Selalu haus akan teknologi baru. Saya fokus pada performa, keamanan, dan pengalaman pengguna (UX) yang luar biasa di setiap baris kode yang saya tulis."
-    // }
   ];
 
   return (
@@ -40,16 +34,16 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-medium mb-2 block uppercase tracking-widest text-sm">Tentang Saya</span>
+          <span className="text-primary font-medium mb-2 block uppercase tracking-widest text-sm">About Me</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
-            Mengenal Lebih Dekat
+            Get to Know Me Better
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           
-          {/* Left Side: Image with Floating Animation */}
+          {/* Left Side */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -68,26 +62,24 @@ export default function AboutSection() {
                     whileInView={{ scale: 1 }}
                     className="text-8xl filter drop-shadow-xl"
                   >
-                    👨‍💻
+                    👩‍🎓
                   </motion.span>
                 </div>
               </motion.div>
               
-              {/* Floating Badge */}
               <motion.div 
                 whileHover={{ scale: 1.1 }}
                 className="absolute -bottom-6 -right-6 p-6 glass rounded-2xl shadow-card z-20 border border-primary/20 backdrop-blur-md"
               >
-                <p className="font-display font-bold text-3xl text-primary">5+ Tahun</p>
-                <p className="text-sm font-medium text-muted-foreground uppercase">Pengalaman</p>
+                <p className="font-display font-bold text-3xl text-primary">High School</p>
+                <p className="text-sm font-medium text-muted-foreground uppercase">Student</p>
               </motion.div>
 
-              {/* Decorative Background Element */}
               <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl" />
             </div>
           </motion.div>
 
-          {/* Right Side: Accordion & Stats */}
+          {/* Right Side */}
           <div className="space-y-8">
             <div className="space-y-4">
               {accordionData.map((item, index) => (
@@ -132,7 +124,7 @@ export default function AboutSection() {
               ))}
             </div>
 
-            {/* Stats Grid */}
+            {/* Stats */}
             <div className="grid grid-cols-2 gap-4 pt-4">
               {stats.map((stat, index) => (
                 <motion.div
