@@ -68,7 +68,7 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-lg md:text-xl text-muted-foreground mb-8"
             >
-              I am a student with a strong interest in technology and a
+              I am a student in MAN 1 Banda Aceh with a strong interest in technology and a
               background in chemistry. Currently, I am focused on learning
               programming and continuously exploring new knowledge across
               different fields.
