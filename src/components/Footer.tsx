@@ -5,8 +5,8 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/naufal-angkasah/tes-modul-aja.git', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/naufal-angkasah/', label: 'LinkedIn' },
+    { icon: Github, href: 'https://github.com/sasawho/Sa-Portofolio', label: 'GitHub' },
+    { icon: Instagram, href: 'https://www.instagram.com/khan.saa288?igsh=MWM1dWYzeDB6N2Rndw==', label: 'Instagram'},
     // { icon: Youtube, href: '#', label: 'YouTube' },
     // { icon: Instagram, href: '#', label: 'Instagram' },
   ];
