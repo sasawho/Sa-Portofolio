@@ -1,15 +1,12 @@
-// "use client";
-
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, Play, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-// --- 0. IMPORT ASSETS ---
+
 import PetirImg from '../assets/petir.png';
 import JoinUsGif from '../assets/joinus.gif';
 import WeatherImg from '../assets/weatheer.gif';
 
-// 1. Varian Animasi
 const slideVariants = {
   enter: (direction: number) => ({
     x: direction > 0 ? 100 : -100,
@@ -27,7 +24,6 @@ const slideVariants = {
   }),
 };
 
-// 2. Carousel
 const CardCarousel = ({ images }: { images: string[] }) => {
   const [[page, direction], setPage] = useState([0, 0]);
   const imageIndex = Math.abs(page % images.length);
@@ -85,56 +81,54 @@ const CardCarousel = ({ images }: { images: string[] }) => {
   );
 };
 
-// 3. DATA PROJECTS (UPDATED FOR YOU)
 const projects = [
   {
     title: 'Chemistry Exploration',
-    description: 'A personal project exploring chemistry concepts, experiments, and reactions that I learn in school and through independent study.',
-    tags: ['Chemistry', 'Science', 'Learning'],
-    image: '🧪',
+    description: 'A collection of my learning journey in chemistry, exploring concepts, experiments, and understanding how reactions shape the world around us.',
+    tags: ['Chemistry', 'Science', 'Experiments'],
+    image: [PetirImg, WeatherImg, JoinUsGif],
     color: 'from-blue-500/20 to-cyan-500/20',
     github: '#',
     demo: '#',
   },
   {
-    title: 'Biology Study Notes',
-    description: 'A collection of biology notes and summaries to help understand complex topics in a simpler and more structured way.',
-    tags: ['Biology', 'Education', 'Notes'],
-    image: '🦠',
-    color: 'from-green-500/20 to-emerald-500/20',
+    title: 'Biology & Science Studies',
+    description: 'Documenting my studies in biology and science, focusing on understanding living systems and how they interact with the environment.',
+    tags: ['Biology', 'Science', 'Learning'],
+    image: [WeatherImg, PetirImg, JoinUsGif],
+    color: 'from-green-500/20 to-teal-500/20',
     github: '#',
     demo: '#',
   },
   {
-    title: 'English Debate Practice',
-    description: 'My journey in English debate, including practice topics, argument development, and improving public speaking skills.',
-    tags: ['Debate', 'English', 'Communication'],
-    image: '🎤',
+    title: 'English Debate Journey',
+    description: 'My experience in English debate, developing critical thinking, argumentation, and public speaking skills through competitions and practice.',
+    tags: ['Debate', 'English', 'Public Speaking'],
+    image: [JoinUsGif, PetirImg, WeatherImg],
     color: 'from-purple-500/20 to-pink-500/20',
     github: '#',
     demo: '#',
   },
   {
     title: 'Volleyball Team Experience',
-    description: 'My experience as part of the volleyball team, focusing on teamwork, discipline, and improving physical performance.',
-    tags: ['Sports', 'Teamwork', 'Volleyball'],
-    image: '🏐',
+    description: 'Being part of a volleyball team has taught me discipline, teamwork, and resilience both on and off the court.',
+    tags: ['Volleyball', 'Teamwork', 'Sports'],
+    image: [PetirImg, JoinUsGif, WeatherImg],
     color: 'from-orange-500/20 to-red-500/20',
     isContent: true,
     youtube: '#',
   },
   {
-    title: 'School Organization Activities',
-    description: 'Active participation in school organizations, contributing to events, teamwork, and leadership development.',
+    title: 'Organization & Leadership',
+    description: 'Active involvement in school organizations, contributing to teamwork, leadership, and event coordination experiences.',
     tags: ['Organization', 'Leadership', 'Teamwork'],
-    image: '📱',
+    image: [JoinUsGif, WeatherImg, PetirImg],
     color: 'from-cyan-500/20 to-blue-500/20',
     isContent: true,
     youtube: '#',
   },
 ];
 
-// 4. MAIN COMPONENT
 export default function ProjectsSection() {
   return (
     <section id="projects" className="py-20 md:py-32 bg-muted/30">
@@ -148,7 +142,7 @@ export default function ProjectsSection() {
         >
           <span className="text-primary font-medium mb-2 block">Portfolio</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
-            Projects & Activities
+            My Journey & Activities
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>
@@ -210,7 +204,7 @@ export default function ProjectsSection() {
                     <Button size="sm" className="rounded-full flex-1" asChild>
                       <a href={project.demo}>
                         <ExternalLink className="h-4 w-4 mr-2" />
-                        Demo
+                        View
                       </a>
                     </Button>
                   )}
@@ -218,7 +212,7 @@ export default function ProjectsSection() {
                     <Button size="sm" className="rounded-full w-full" asChild>
                       <a href={project.youtube}>
                         <Play className="h-4 w-4 mr-2" />
-                        Watch
+                        Explore
                       </a>
                     </Button>
                   )}
