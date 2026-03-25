@@ -2,25 +2,24 @@ import { motion } from 'framer-motion';
 
 const skills = {
   frontend: [
-    { name: 'Vue.js', level: 100 },
-    { name: 'React', level: 95 },
-    { name: 'TypeScript', level: 90 },
-    { name: 'swift', level: 88 },
-    { name: 'Tailwind CSS', level: 95 },
+    { name: 'Basic Web Development', level: 70 },
+    { name: 'HTML & CSS', level: 75 },
+    { name: 'JavaScript (Beginner)', level: 65 },
+    { name: 'Learning React', level: 60 },
+    { name: 'Tailwind CSS', level: 70 },
   ],
   backend: [
-    { name: 'Node.js', level: 90 },
-    { name: 'Python', level: 98 },
-    { name: 'PostgreSQL', level: 88 },
-    { name: 'MongoDB', level: 90 },
-    { name: 'MySql', level: 92 },
+    { name: 'Chemistry Knowledge', level: 85 },
+    { name: 'Analytical Thinking', level: 80 },
+    { name: 'Problem Solving', level: 78 },
+    { name: 'Scientific Understanding', level: 82 },
+    { name: 'Logical Reasoning', level: 75 },
   ],
   DevOps: [
-    { name: 'Git', level: 95 },
-    { name: 'Docker', level: 80 },
-    { name: 'AWS', level: 75 },
-    // { name: 'Figma', level: 85 },
-    { name: 'CI/CD', level: 82 },
+    { name: 'English Debate', level: 85 },
+    { name: 'Public Speaking', level: 80 },
+    { name: 'Teamwork (Volleyball)', level: 88 },
+    { name: 'Organization Skills', level: 82 },
   ],
 };
 
@@ -61,9 +60,9 @@ export default function SkillsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-medium mb-2 block">Keahlian</span>
+          <span className="text-primary font-medium mb-2 block">Skills</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
-            Hard Skills
+            My Abilities
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>
@@ -79,9 +78,9 @@ export default function SkillsSection() {
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-primary/10">
-                <span className="text-2xl">🎨</span>
+                <span className="text-2xl">💻</span>
               </div>
-              <h3 className="font-display text-xl font-bold">Frontend</h3>
+              <h3 className="font-display text-xl font-bold">Tech & Coding</h3>
             </div>
             <div className="space-y-4">
               {skills.frontend.map((skill, index) => (
@@ -100,9 +99,9 @@ export default function SkillsSection() {
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-primary/10">
-                <span className="text-2xl">⚙️</span>
+                <span className="text-2xl">🧪</span>
               </div>
-              <h3 className="font-display text-xl font-bold">Backend</h3>
+              <h3 className="font-display text-xl font-bold">Academics</h3>
             </div>
             <div className="space-y-4">
               {skills.backend.map((skill, index) => (
@@ -121,9 +120,9 @@ export default function SkillsSection() {
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-primary/10">
-                <span className="text-2xl">🛠️</span>
+                <span className="text-2xl">🌟</span>
               </div>
-              <h3 className="font-display text-xl font-bold">DevOps</h3>
+              <h3 className="font-display text-xl font-bold">Activities</h3>
             </div>
             <div className="space-y-4">
               {skills.DevOps.map((skill, index) => (
