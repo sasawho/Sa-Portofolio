@@ -4,57 +4,57 @@ import { Button } from '@/components/ui/button';
 
 const certificates = [
   {
-    title: 'AWS Certified Solutions Architect',
-    issuer: 'Amazon Web Services',
+    title: 'Chemistry Learning Achievement',
+    issuer: 'School Academic Program',
     date: '2024',
-    credentialId: 'AWS-SAA-123456',
-    image: '🏆',
-    color: 'from-orange-500/20 to-yellow-500/20',
-    link: '#',
-  },
-  {
-    title: 'Google Professional Cloud Developer',
-    issuer: 'Google Cloud',
-    date: '2023',
-    credentialId: 'GCP-PCD-789012',
-    image: '☁️',
+    credentialId: 'CHEM-EXP-01',
+    image: '🧪',
     color: 'from-blue-500/20 to-cyan-500/20',
     link: '#',
   },
   {
-    title: 'Meta Front-End Developer',
-    issuer: 'Meta (Coursera)',
-    date: '2023',
-    credentialId: 'META-FE-345678',
-    image: '⚛️',
-    color: 'from-blue-600/20 to-indigo-500/20',
-    link: '#',
-  },
-  {
-    title: 'MongoDB Certified Developer',
-    issuer: 'MongoDB University',
-    date: '2023',
-    credentialId: 'MDB-DEV-901234',
-    image: '🍃',
+    title: 'Biology Study Recognition',
+    issuer: 'Science Department',
+    date: '2024',
+    credentialId: 'BIO-LEARN-02',
+    image: '🧬',
     color: 'from-green-500/20 to-emerald-500/20',
     link: '#',
   },
   {
-    title: 'Certified Kubernetes Administrator',
-    issuer: 'CNCF',
-    date: '2022',
-    credentialId: 'CKA-567890',
-    image: '⚙️',
-    color: 'from-indigo-500/20 to-purple-500/20',
+    title: 'English Debate Participation',
+    issuer: 'School Competition',
+    date: '2023',
+    credentialId: 'DEBATE-ENG-03',
+    image: '🎤',
+    color: 'from-purple-500/20 to-pink-500/20',
     link: '#',
   },
   {
-    title: 'Professional Scrum Master I',
-    issuer: 'Scrum.org',
+    title: 'Volleyball Team Member',
+    issuer: 'School Sports Team',
+    date: '2023',
+    credentialId: 'SPORT-VB-04',
+    image: '🏐',
+    color: 'from-orange-500/20 to-red-500/20',
+    link: '#',
+  },
+  {
+    title: 'Organization & Leadership',
+    issuer: 'Student Organization',
+    date: '2023',
+    credentialId: 'ORG-LEAD-05',
+    image: '👥',
+    color: 'from-cyan-500/20 to-blue-500/20',
+    link: '#',
+  },
+  {
+    title: 'Public Speaking & Confidence',
+    issuer: 'School Activities',
     date: '2022',
-    credentialId: 'PSM-I-234567',
-    image: '📋',
-    color: 'from-teal-500/20 to-cyan-500/20',
+    credentialId: 'SPEAK-PS-06',
+    image: '🗣️',
+    color: 'from-indigo-500/20 to-purple-500/20',
     link: '#',
   },
 ];
@@ -72,7 +72,7 @@ export default function CertificatesSection() {
         >
           <span className="text-primary font-medium mb-2 block">Kredensial</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
-            Sertifikat &amp; Lisensi
+            Sertifikat & Aktivitas
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>
@@ -116,7 +116,7 @@ export default function CertificatesSection() {
                   <Button variant="outline" size="sm" className="rounded-full mt-2" asChild>
                     <a href={cert.link} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="h-4 w-4 mr-1" />
-                      Verifikasi
+                      View
                     </a>
                   </Button>
                 </div>
