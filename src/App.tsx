@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
+import CustomCursor from "./components/CustomCursor";
 
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -10,17 +11,25 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import LoadingScreen from "./components/LoadingScreen"; // 👈 ADD THIS
+import LoadingScreen from "./components/LoadingScreen";
 
 const queryClient = new QueryClient();
 
 const App = () => {
   const [loading, setLoading] = useState(true);
 
+  // ✅ Detect mobile (disable custom cursor)
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1800); // ⏱ Apple-like timing (not too long)
+    }, 1800);
+
+    // detect screen size
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    }
 
     return () => clearTimeout(timer);
   }, []);
@@ -31,7 +40,10 @@ const App = () => {
         <Toaster />
         <Sonner />
 
-        {/* 🔥 LOADING SCREEN WITH SMOOTH EXIT */}
+        {/* ✨ CUSTOM CURSOR (DESKTOP ONLY) */}
+        {!isMobile && <CustomCursor />}
+
+        {/* 🔥 LOADING SCREEN */}
         <AnimatePresence mode="wait">
           {loading && <LoadingScreen key="loading" />}
         </AnimatePresence>
