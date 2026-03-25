@@ -41,7 +41,7 @@ export default function HeroSection() {
             className="flex-shrink-0"
           >
             <img
-              src="/foto.jpg" // ganti dengan foto kamu
+              src="foto.jpeg" // ganti dengan foto kamu
               alt="Naufal"
               className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-primary shadow-glow"
             />
