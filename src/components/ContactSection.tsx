@@ -126,7 +126,7 @@ export default function ContactSection() {
           >
             <div>
               <h3 className="font-display text-2xl font-bold mb-4">
-                Mari Berkolaborasi!
+                Let's Connect!
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 Punya hal yang ingin diceritakan atau ingin berkolaborasi? Jangan ragu untuk 
