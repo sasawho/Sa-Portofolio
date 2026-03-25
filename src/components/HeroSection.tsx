@@ -102,7 +102,7 @@ export default function HeroSection() {
                     element.scrollIntoView({ behavior: "smooth" });
                 }}
               >
-                Contact Me
+                My Contact
               </Button>
             </motion.div>
 
